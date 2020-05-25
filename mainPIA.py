@@ -3,20 +3,27 @@ print("1.- Empleados\n2.- Cursos\n3.- Temas\n4.- Videos\n5.- Temas asignados al 
 
 opcionInicial = int(input("Elija una opcion: "))
 
+
 if opcionInicial == 1:
-    print("***** EMPLEADOS *****")
+    print("\n***** EMPLEADOS *****")
+    print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
 
 if opcionInicial == 2:
-    print("***** CURSOS *****")
+    print("\n***** CURSOS *****")
+    print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
 
 if opcionInicial == 3:
-    print("***** TEMAS *****")
+    print("\n***** TEMAS *****")
+    print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
 
 if opcionInicial == 4:
-    print("***** VIDEOS *****")
+    print("\n***** VIDEOS *****")
+    print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
 
 if opcionInicial == 5:
-    print("***** TEMAS ASIGNADOS AL CURSO *****")
+    print("\n***** TEMAS ASIGNADOS AL CURSO *****")
+    print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
 
 if opcionInicial == 6:
-    print("***** VIDEOS ASIGNADOS A UN TEMA *****")
+    print("\n***** VIDEOS ASIGNADOS A UN TEMA *****")
+    print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
