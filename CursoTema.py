@@ -13,7 +13,7 @@ class cursoTema:
     def idCursoTema(self, valor):
         self.__idCursoTema = valor
 
-     @property
+    @property
     def idCurso(self):
         return self.__idCurso
     
@@ -21,10 +21,15 @@ class cursoTema:
     def idCurso(self, valor):
         self.__idCurso = valor
 
-     @property
+    @property
     def idTema(self):
         return self.__idTema
     
     @idTema.setter
     def idTema(self, valor):
         self.__idTema = valor
+
+    def agregar(self):
+        archivo = open("./archivos/Curso_Tema.txt", 'a')
+        archivo.write(f"{self.idCursoTema} / {self.idCurso} / {self.idTema}")
+        archivo.close()
