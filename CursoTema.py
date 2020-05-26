@@ -43,3 +43,9 @@ class cursoTema:
             if linea != (f"{self.idCursoTema} / {self.idCurso} / {self.idTema}  \n"):
                 archivo.write(linea)
         archivo.close()
+
+    def consultar(self):
+        archivo = open("./archivos/Curso_Tema.txt", 'r')
+        print("\n")
+        print(archivo.read())
+        archivo.close()
