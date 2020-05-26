@@ -1,7 +1,7 @@
 from CursoTema import cursoTema
 from Video import video
 from CursoTemaVideo import cursotemavideo
-from Tema import Tema
+from Temas import Tema
 
 while True:
 
@@ -28,7 +28,7 @@ while True:
         if opcion3 == 1:
             idTema = int(input("Ingrese el id del tema: "))
             nombre = (input("Ingrese el nombre del tema: "))
-            t = Tema(idtema, nombre)
+            t = Tema(idTema, nombre)
             t.agregar()
             input("\nPresiona enter para continuar...\n")
 
