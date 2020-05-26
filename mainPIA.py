@@ -46,6 +46,19 @@ while True:
             idCursoTema = int(input("Ingrese idCursoTema: "))
             ctd = cursoTema(idCursoTema, idCurso, idTema)
             ctd.borrar()
+            input("Presiona enter para continuar...")
+
+        if opcion5 == 3:
+            idCurso = int(input("Ingrese el id del curso a modificar: "))
+            idTema = int(input("Ingrese el id del tema a modificar: "))
+            idCursoTema = int(input("Ingrese idCursoTema a modificar: "))
+            ctb = cursoTema(idCursoTema, idCurso, idTema)
+            ctb.borrar()
+            idCurso = int(input("Ingrese el nuevo id del curso: "))
+            idTema = int(input("Ingrese el nuevo id del tema: "))
+            idCursoTema = int(input("Ingrese el nuevo id para guardarlo: "))
+            ctm = cursoTema(idCursoTema, idCurso, idTema)
+            ctm.agregar()
     
     if opcionInicial == 6:
         print("\n***** VIDEOS ASIGNADOS A UN TEMA *****")
