@@ -1,5 +1,5 @@
 from CursoTema import cursoTema
-
+from Video import video
 while True:
 
     print("***** MENU INICIAL *****")
@@ -26,6 +26,15 @@ while True:
         print("\n***** VIDEOS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion4 = int(input("\nElija una opcion: "))
+
+        if opcion4 == 1:
+            idVideo=int(input("Ingresa la id del Video: "))
+            nombre=(input("Ingrese el nombre del Video: "))
+            url=(input("Ingrese la url del Video: "))
+            fechapublicacion=(input("Ingrese la Fecha de Publicación del Video: "))
+            v=video(idVideo, nombre, url, fechapublicacion)
+            v.agregar()
+            input("Presiona enter para continuar...")
 
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
