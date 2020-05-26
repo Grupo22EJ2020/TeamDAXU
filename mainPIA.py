@@ -1,6 +1,7 @@
 from CursoTema import cursoTema
 from Video import video
 from CursoTemaVideo import cursotemavideo
+from Temas import Tema
 
 while True:
 
@@ -23,6 +24,14 @@ while True:
         print("\n***** TEMAS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion3 = int(input("\nElija una opcion: "))
+
+        if opcion3 == 1:
+            idTema = int(input("Ingrese el id del tema: "))
+            nombre = (input("Ingrese el nombre del tema: "))
+            t = Tema(idTema, nombre)
+            t.agregar()
+            input("\nPresiona enter para continuar...\n")
+
 
     if opcionInicial == 4:
         print("\n***** VIDEOS *****")
