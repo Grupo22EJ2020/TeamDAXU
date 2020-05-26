@@ -16,8 +16,7 @@ def nombre(self):
     return self.nombre
 
 @nombre.setter
-def nombre(self, valor):
-    self.__nombre = valor
+    archivo.close()
 
 def agregar(self):
     archivo=open("./archivos/Tema.txt", 'a')
