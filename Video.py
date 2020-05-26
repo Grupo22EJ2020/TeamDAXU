@@ -1,4 +1,4 @@
-class Video:
+class video:
     def __init__(self, idVideo, nombre, url, fechapublicacion):
         self.idVideo = idVideo
         self.nombre = nombre
@@ -17,7 +17,7 @@ class Video:
     def nombre(self):
         return self.__nombre
 
-     @nombre.setter
+    @nombre.setter
     def nombre(self, valor):
         self.__nombre = valor
 
@@ -37,16 +37,7 @@ class Video:
     def fechapublicacion(self, valor):
         self.__fechapublicacion = valor
 
-    def Agregar(self):
-        archivo=open("./archivos/Video.txt", 'a')
-        idVideo=(input("Ingresa la id del Video: /n"))
-        nombre=(input("Ingrese el nombre del Video: /n"))
-        url=(input("Ingrese la url del Video: /n"))
-        fechapublicacion=(input("Ingrese la Fecha de Publicación del Video: /n"))
-        archivo=write(f"{self.idVideo} / {self.nombre} / {self.url} {self.fechapublicacion} \n")
+    def agregar(self):
+        archivo=open("./archivos/video.txt", 'a')
+        archivo.write(f"{self.idVideo} / {self.nombre} / {self.url} / {self.fechapublicacion} \n")
         archivo.close()
-        
-        
-
-
-

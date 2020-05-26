@@ -1,8 +1,10 @@
 from CursoTema import cursoTema
+from Video import video
+from CursoTemaVideo import cursotemavideo
 
 while True:
 
-    print("***** MENU INICIAL *****")
+    print("\n***** MENU INICIAL *****\n")
     print("1.- Empleados\n2.- Cursos\n3.- Temas\n4.- Videos\n5.- Temas asignados al curso\n6.- Videos asignados a un tema")
 
     opcionInicial = int(input("\nElija una opcion: "))
@@ -27,6 +29,15 @@ while True:
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion4 = int(input("\nElija una opcion: "))
 
+        if opcion4 == 1:
+            idVideo = int(input("Ingresa el id para guardar el Video: "))
+            nombre = (input("Ingrese el nombre del Video: "))
+            url = (input("Ingrese el url del Video: "))
+            fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
+            v = video(idVideo, nombre, url, fechapublicacion)
+            v.agregar()
+            input("\nPresiona enter para continuar...\n")
+
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
@@ -35,10 +46,10 @@ while True:
         if opcion5 == 1:
             idCurso = int(input("Ingrese el id del curso: "))
             idTema = int(input("Ingrese el id del tema: "))
-            idCursoTema = int(input("Ingrese id nuevo para guardarlo: "))
+            idCursoTema = int(input("Ingrese id para guardarlo: "))
             ct = cursoTema(idCursoTema, idCurso, idTema)
             ct.agregar()
-            input("Presiona enter para continuar...")
+            input("\nPresiona enter para continuar...\n")
 
         if opcion5 == 2:
             idCurso = int(input("Ingrese el id del curso: "))
@@ -46,7 +57,7 @@ while True:
             idCursoTema = int(input("Ingrese idCursoTema: "))
             ctd = cursoTema(idCursoTema, idCurso, idTema)
             ctd.borrar()
-            input("Presiona enter para continuar...")
+            input("\nPresiona enter para continuar...\n")
 
         if opcion5 == 3:
             idCurso = int(input("Ingrese el id del curso a modificar: "))
@@ -59,8 +70,23 @@ while True:
             idCursoTema = int(input("Ingrese el nuevo id para guardarlo: "))
             ctm = cursoTema(idCursoTema, idCurso, idTema)
             ctm.agregar()
+            input("\nPresiona enter para continuar...\n")
+
+        if opcion5 == 4:
+            ct = cursoTema(None, None, None)
+            ct.consultar()
+            input("\nPresiona enter para continuar...\n")
     
     if opcionInicial == 6:
         print("\n***** VIDEOS ASIGNADOS A UN TEMA *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion6 = int(input("\nElija una opcion: "))
+
+        if opcion6 == 1:
+            idCT = int(input("Ingrese el id del CursoTema: "))
+            idV = int(input("Ingrese el id del Video que quiere asignar: "))
+            idCursoTV = int(input("Ingrese el id para guardarlo: "))
+            ctv = cursotemavideo(idCursoTV, idCT, idV)
+            ctv.agregar()
+            input("\nPresiona enter para continuar...\n"
+
