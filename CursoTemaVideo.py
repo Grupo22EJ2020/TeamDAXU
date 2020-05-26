@@ -28,3 +28,8 @@ class cursotemavideo:
     @idV.setter
     def idV(self, valor):
         self.__idV = valor
+
+    def agregar(self):
+        archivo = open("./archivos/Curso_Tema_Video.txt", 'a')
+        archivo.write(f"{self.idCursoTV} / {self.idCT} / {self.idV}  \n")
+        archivo.close()
