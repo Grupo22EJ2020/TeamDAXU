@@ -3,4 +3,3 @@ VIDEOS ASIGNADOS A UN TEMA
 idCursoTemaVideo / idCursoTema / idVideo
 
 1519 / 1514 / 1903865  
-1012 / 1010 / 1214  

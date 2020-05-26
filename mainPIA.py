@@ -88,5 +88,12 @@ while True:
             idCursoTV = int(input("Ingrese el id para guardarlo: "))
             ctv = cursotemavideo(idCursoTV, idCT, idV)
             ctv.agregar()
-            input("\nPresiona enter para continuar...\n"
+            input("\nPresiona enter para continuar...\n")
 
+        if opcion6 == 2: 
+            idCT = int(input("Ingrese el id del CursoTema: "))
+            idV = int(input("Ingrese el id del Video: "))
+            idCursoTV = int(input("Ingrese idCursoTemaVideo: "))
+            ctv = cursotemavideo(idCursoTV, idCT, idV)
+            ctv.borrar()
+            input("\nPresiona enter para continuar...\n")

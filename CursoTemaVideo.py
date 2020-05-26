@@ -33,3 +33,13 @@ class cursotemavideo:
         archivo = open("./archivos/Curso_Tema_Video.txt", 'a')
         archivo.write(f"{self.idCursoTV} / {self.idCT} / {self.idV}  \n")
         archivo.close()
+
+    def borrar(self):
+        archivo = open("./archivos/Curso_Tema_Video.txt", 'r')
+        lineas = archivo.readlines()
+        archivo.close()
+        archivo = open("./archivos/Curso_Tema_Video.txt", 'w')
+        for linea in lineas:
+            if linea != (f"{self.idCursoTV} / {self.idCT} / {self.idV}  \n"):
+                archivo.write(linea)
+        archivo.close()
