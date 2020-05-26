@@ -43,3 +43,9 @@ class cursotemavideo:
             if linea != (f"{self.idCursoTV} / {self.idCT} / {self.idV}  \n"):
                 archivo.write(linea)
         archivo.close()
+    
+    def consultar(self):
+        archivo = open("./archivos/Curso_Tema_Video.txt", 'r')
+        print("\n")
+        print(archivo.read())
+        archivo.close()

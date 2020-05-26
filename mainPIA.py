@@ -111,3 +111,8 @@ while True:
             ctv = cursotemavideo(idCursoTV, idCT, idV)
             ctv.agregar()
             input("\nPresiona enter para continuar...\n")
+
+        if opcion6 == 4:
+            ctv = cursotemavideo(None, None, None)
+            ctv.consultar()
+            input("\nPresiona enter para continuar...\n")
