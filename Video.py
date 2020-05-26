@@ -41,3 +41,13 @@ class video:
         archivo=open("./archivos/video.txt", 'a')
         archivo.write(f"{self.idVideo} / {self.nombre} / {self.url} / {self.fechapublicacion} \n")
         archivo.close()
+
+    def borrar(self):
+        archivo = open("./archivos/video.txt", 'r')
+        lineas = archivo.readlines()
+        archivo.close()
+        archivo = open("./archivos/video.txt", 'w')
+        for linea in lineas:
+            if linea != (f"{self.idVideo} / {self.nombre} / {self.url} / {self.fechapublicacion} \n"):
+                archivo.write(linea)
+        archivo.close()
