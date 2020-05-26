@@ -21,10 +21,19 @@ def nombre(self, valor):
 
 
 def agregar(self):
-    archivo=open("./archivos/Tema.txt", 'a')
+    archivo=open("./archivos/Temas.txt", 'a')
     archivo.write(f"{self.idTema} / {self.nombre} \n")
     archivo.close()
 
+def borrar(self):
+    archivo=open("./archivos/Temas.txt", "r")
+    lineas=archivo.readlines()
+    archivo.close()
+    archivo=open("./archivos/Temas.txt", "w")
+    for linea in lineas:
+        if linea != (f"{self.idTema} / {self.nombre} \n"):
+            archivo.write(linea)
+    archivo.close()
 
 
 
