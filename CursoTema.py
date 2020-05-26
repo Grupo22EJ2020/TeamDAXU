@@ -31,5 +31,16 @@ class cursoTema:
 
     def agregar(self):
         archivo = open("./archivos/Curso_Tema.txt", 'a')
-        archivo.write(f"{self.idCursoTema} / {self.idCurso} / {self.idTema}")
+        archivo.write(f"{self.idCursoTema} / {self.idCurso} / {self.idTema}  \n")
+        #print(archivo.read())
+        archivo.close()
+
+    def borrar(self):
+        archivo = open("./archivos/Curso_Tema.txt", 'r')
+        lineas = archivo.readlines()
+        archivo.close()
+        archivo = open("./archivos/Curso_Tema.txt", 'w')
+        for linea in lineas:
+            if linea != (f"{self.idCursoTema} / {self.idCurso} / {self.idTema}  \n"):
+                archivo.write(linea)
         archivo.close()
