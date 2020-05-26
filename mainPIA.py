@@ -97,3 +97,17 @@ while True:
             ctv = cursotemavideo(idCursoTV, idCT, idV)
             ctv.borrar()
             input("\nPresiona enter para continuar...\n")
+
+        if opcion6 == 3:
+            idCT = int(input("Ingrese el id del CursoTema a modificar: "))
+            idV = int(input("Ingrese el id del video a modificar: "))
+            idCursoTV = int(input("Ingrese idCursoTemaVideo a modificar: "))
+            ctv = cursotemavideo(idCursoTV, idCT, idV)
+            ctv.borrar()
+            print("------------------------------")
+            idCT = int(input("Ingrese el nuevo id del CursoTema: "))
+            idV = int(input("Ingrese el nuevo id del video: "))
+            idCursoTV = int(input("Ingrese el nuevo id para guardarlo: "))
+            ctv = cursotemavideo(idCursoTV, idCT, idV)
+            ctv.agregar()
+            input("\nPresiona enter para continuar...\n")
