@@ -3,27 +3,27 @@ class Tema:
         self.idTema = idTema
         self.nombre = nombre
 
-@property 
-def idTema(self):
-    return self.idTema
+    @property 
+    def idTema(self):
+        return self.idTema
 
-@idTema.setter
-def idTema(self, valor):
-    self.__idTema = valor
+    @idTema.setter
+    def idTema(self, valor):
+        self.__idTema = valor
 
-@property
-def nombre(self):
-    return self.nombre
+    @property
+    def nombre(self):
+        return self.nombre
 
-@nombre.setter
-def nombre(self, valor):
-    self.__nombre = valor
+    @nombre.setter
+    def nombre(self, valor):
+        self.__nombre = valor
 
 
-def agregar(self):
-    archivo=open("./archivos/Tema.txt", 'a')
-    archivo.write(f"{self.idTema} / {self.nombre} \n")
-    archivo.close()
+    def agregar(self):
+        archivo=open("./archivos/Temas.txt", 'a')
+        archivo.write(f"{self.idTema} / {self.nombre} \n")
+        archivo.close()
 
 
 
