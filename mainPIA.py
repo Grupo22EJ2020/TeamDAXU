@@ -22,9 +22,14 @@ while True:
         opcion2 = int(input("\nElija una opcion: "))
 
         if opcion2 == 1:
-            idCurso = int(input("Ingrese el id para guardar el Curso: "))
+            try:
+                idCurso = int(input("Ingrese el id para guardar el Curso: "))
+                idEmpleado = int(input("Ingrese el id del Empleado: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idCurso = int(input("Ingrese el id para guardar el Curso: "))
+                idEmpleado = int(input("Ingrese el id del Empleado: "))
             descripcion = (input("Ingrese la descripción del Curso: "))
-            idEmpleado = int(input("Ingrese el id del Empleado: "))
             C = curso(idCurso, descripcion, idEmpleado)
             C.agregar()
             print("\nListo!\n")
@@ -52,9 +57,14 @@ while True:
             C = curso(idCurso, descripcion, idEmpleado)
             C.borrar()
             print("------------------------------")
-            idCurso = int(input("Ingrese el nuevo id del Curso: "))
+            try:
+                idCurso = int(input("Ingrese el nuevo id del Curso: "))
+                idEmpleado = int(input("Ingrese el nuevo id del Empleado: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idCurso = int(input("Ingrese el nuevo id del Curso: "))
+                idEmpleado = int(input("Ingrese el nuevo id del Empleado: "))
             descripcion = (input("Ingrese la nueva descripcion del Curso: "))
-            idEmpleado = int(input("Ingrese el nuevo id del Empleado: "))
             C = curso(idCurso, descripcion, idEmpleado)
             C.agregar()
             print("\nListo!\n")
@@ -71,7 +81,11 @@ while True:
         opcion3 = int(input("\nElija una opcion: "))
 
         if opcion3 == 1:
-            idTema = int(input("Ingrese el id del tema: "))
+            try:
+                idTema = int(input("Ingrese el id del tema: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idTema = int(input("Ingrese el id del tema: "))
             nombre = input("Ingrese el nombre del tema: ")
             t = Tema(idTema, nombre)
             t.agregar()
@@ -98,7 +112,11 @@ while True:
             t = Tema(idTema, nombre)
             t.borrar()
             print("--------------------------------------")
-            idTema = int(input("Ingrese el nuevo id del tema: "))
+            try:
+                idTema = int(input("Ingrese el nuevo id del tema: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idTema = int(input("Ingrese el nuevo id del tema: "))
             nombre = int(input("Ingrese el nuevo nombre del tema: "))
             t = Tema(idTema, nombre)
             t.agregar()
@@ -116,7 +134,11 @@ while True:
         opcion4 = int(input("\nElija una opcion: "))
 
         if opcion4 == 1:
-            idVideo = int(input("Ingresa el id para guardar el Video: "))
+            try:
+                idVideo = int(input("Ingresa el id para guardar el Video: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idVideo = int(input("Ingresa el id para guardar el Video: "))
             nombre = (input("Ingrese el nombre del Video: "))
             url = (input("Ingrese el url del Video: "))
             fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
@@ -149,7 +171,11 @@ while True:
             v = video(idVideo, nombre, url, fechapublicacion)
             v.borrar()
             print("------------------------------")
-            idVideo = int(input("Ingrese el nuevo id del Video: "))
+            try:
+                idVideo = int(input("Ingrese el nuevo id del Video: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idVideo = int(input("Ingrese el nuevo id del Video: "))
             nombre = (input("Ingrese el nuevo nombre del Video: "))
             url = (input("Ingrese la nueva url para guardarla: "))
             fechapublicacion = (input("Ingrese la nueva Fecha de Publicacion: "))
@@ -169,9 +195,15 @@ while True:
         opcion5 = int(input("\nElija una opcion: "))
 
         if opcion5 == 1:
-            idCurso = int(input("Ingrese el id del curso: "))
-            idTema = int(input("Ingrese el id del tema: "))
-            idCursoTema = int(input("Ingrese id para guardarlo: "))
+            try:
+                idCurso = int(input("Ingrese el id del curso: "))
+                idTema = int(input("Ingrese el id del tema: "))
+                idCursoTema = int(input("Ingrese id para guardarlo: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idCurso = int(input("Ingrese el id del curso: "))
+                idTema = int(input("Ingrese el id del tema: "))
+                idCursoTema = int(input("Ingrese id para guardarlo: "))
             ct = cursoTema(idCursoTema, idCurso, idTema)
             ct.agregar()
             print("\nListo!\n")
@@ -199,9 +231,15 @@ while True:
             ct = cursoTema(idCursoTema, idCurso, idTema)
             ct.borrar()
             print("------------------------------")
-            idCurso = int(input("Ingrese el nuevo id del curso: "))
-            idTema = int(input("Ingrese el nuevo id del tema: "))
-            idCursoTema = int(input("Ingrese el nuevo id para guardarlo: "))
+            try:
+                idCurso = int(input("Ingrese el nuevo id del curso: "))
+                idTema = int(input("Ingrese el nuevo id del tema: "))
+                idCursoTema = int(input("Ingrese el nuevo id para guardarlo: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idCurso = int(input("Ingrese el nuevo id del curso: "))
+                idTema = int(input("Ingrese el nuevo id del tema: "))
+                idCursoTema = int(input("Ingrese el nuevo id para guardarlo: "))
             ct = cursoTema(idCursoTema, idCurso, idTema)
             ct.agregar()
             print("\nListo!\n")
@@ -218,9 +256,15 @@ while True:
         opcion6 = int(input("\nElija una opcion: "))
 
         if opcion6 == 1:
-            idCT = int(input("Ingrese el id del CursoTema: "))
-            idV = int(input("Ingrese el id del Video que quiere asignar: "))
-            idCursoTV = int(input("Ingrese el id para guardarlo: "))
+            try:
+                idCT = int(input("Ingrese el id del CursoTema: "))
+                idV = int(input("Ingrese el id del Video que quiere asignar: "))
+                idCursoTV = int(input("Ingrese el id para guardarlo: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idCT = int(input("Ingrese el id del CursoTema: "))
+                idV = int(input("Ingrese el id del Video que quiere asignar: "))
+                idCursoTV = int(input("Ingrese el id para guardarlo: "))
             ctv = cursotemavideo(idCursoTV, idCT, idV)
             ctv.agregar()
             print("\nListo!\n")
@@ -248,9 +292,15 @@ while True:
             ctv = cursotemavideo(idCursoTV, idCT, idV)
             ctv.borrar()
             print("------------------------------")
-            idCT = int(input("Ingrese el nuevo id del CursoTema: "))
-            idV = int(input("Ingrese el nuevo id del video: "))
-            idCursoTV = int(input("Ingrese el nuevo id para guardarlo: "))
+            try:
+                idCT = int(input("Ingrese el nuevo id del CursoTema: "))
+                idV = int(input("Ingrese el nuevo id del video: "))
+                idCursoTV = int(input("Ingrese el nuevo id para guardarlo: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idCT = int(input("Ingrese el nuevo id del CursoTema: "))
+                idV = int(input("Ingrese el nuevo id del video: "))
+                idCursoTV = int(input("Ingrese el nuevo id para guardarlo: "))
             ctv = cursotemavideo(idCursoTV, idCT, idV)
             ctv.agregar()
             print("\nListo!\n")
