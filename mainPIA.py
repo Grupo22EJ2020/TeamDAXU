@@ -2,6 +2,7 @@ from CursoTema import cursoTema
 from Video import video
 from CursoTemaVideo import cursotemavideo
 from Temas import Tema
+from Curso import curso
 
 while True:
 
@@ -48,9 +49,9 @@ while True:
             C = curso(idCurso, descripcion, idEmpleado)
             C.borrar()
             print("------------------------------")
-            idCurso = int(input("Ingrese el nuevo id del Curso: "))
+            idCurso = int(input("Ingrese la nueva id del Curso: "))
             descripcion = (input("Ingrese la nueva descripcion del Curso: "))
-            idEmpleado = int(input("Ingrese rl id nuevo del Empleado: "))
+            idEmpleado = int(input("Ingrese la id nuevo del Empleado: "))
             C = curso(idCurso, descripcion, idEmpleado)
             C.agregar()
             print("\nListo!\n")
@@ -128,7 +129,7 @@ while True:
             input("\nPresiona enter para continuar...\n")
 
         if opcion4 == 3:
-            v = video(None, None, None)
+            v = video(None, None, None, None)
             v.consultar()
             print("\n**Tome los datos de la informacion de arriba**\n")
             idVideo = int(input("Ingrese el id del Video a modificar: "))
@@ -148,7 +149,7 @@ while True:
             input("\nPresiona enter para continuar...\n")   
 
         if opcion4 == 4:
-            v = video(None, None, None)
+            v = video(None, None, None, None)
             v.consultar()
             input("\nPresiona enter para continuar...\n")
 
