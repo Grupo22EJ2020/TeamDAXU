@@ -48,6 +48,7 @@ class video:
         archivo.close()
         archivo = open("./archivos/video.txt", 'w')
         for linea in lineas:
-            if linea != (f"{self.idVideo} / {self.nombre} / {self.url} / {self.fechapublicacion} \n"):
+             if linea != (f"{self.idVideo} / {self.nombre} / {self.url} / {self.fechapublicacion} \n"):
                 archivo.write(linea)
         archivo.close()
+

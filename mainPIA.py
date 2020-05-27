@@ -45,12 +45,21 @@ while True:
         opcion4 = int(input("\nElija una opcion: "))
 
         if opcion4 == 1:
-            idVideo = int(input("Ingresa el id para guardar el Video: "))
+            idVideo = int(input("Ingrese el id para guardar el Video: "))
             nombre = (input("Ingrese el nombre del Video: "))
             url = (input("Ingrese el url del Video: "))
             fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
             v = video(idVideo, nombre, url, fechapublicacion)
             v.agregar()
+            input("\nPresiona enter para continuar...\n")
+
+        if opcion4 == 2:
+            idVideo =  int(input("Ingrese el id del Video: "))
+            nombre = (input("Ingrese el nombre del Video: "))
+            url = (input("Ingrese el url del Video: "))
+            fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
+            v = video(idVideo, nombre, url, fechapublicacion)
+            v.borrar()
             input("\nPresiona enter para continuar...\n")
 
     if opcionInicial == 5:
@@ -72,6 +81,8 @@ while True:
             ct.consultar()
             print("\n**Tome los datos de la informacion de arriba**\n")
             idCursoTema = int(input("Ingrese idCursoTema: "))
+            idCurso = int(input("Ingrese idCurso: "))
+            idTema = int(input("Ingrese idTema: "))
             ct = cursoTema(idCursoTema, idCurso, idTema)
             ct.borrar()
             print("\nListo!\n")
