@@ -3,6 +3,7 @@ from Video import video
 from CursoTemaVideo import cursotemavideo
 from Temas import Tema
 from Curso import curso
+from Empleados import Empleado
 
 while True:
 
@@ -15,6 +16,19 @@ while True:
         print("\n***** EMPLEADOS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion1 = int(input("\nElija una opcion: "))
+
+        if opcion1 == 1:
+            try:
+                idempleado = int(input("Ingrese el id para guardar el Empleado: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idempleado = int(input("Ingrese el id para guardar el Empleado: "))
+            nombre = (input("Ingrese nombre del Empleado: "))
+            direccion = int(input("Ingrese direccion del empleado"))
+            e = empleado(idempleado, nombre, direccion)
+            e.agregar()
+            print("\nListo!\n")
+            input("\nPresiona enter para continuar...\n")
 
     if opcionInicial == 2:
         print("\n***** CURSOS *****")
