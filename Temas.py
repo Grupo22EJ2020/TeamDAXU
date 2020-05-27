@@ -33,3 +33,11 @@ class Tema:
             if linea != (f"{self.idTema} / {self.nombre} \n"):
                 archivo.write(linea)
         archivo.close()
+
+    def consultar(self):
+        archivo=open("./archivos/Temas.txt", 'r')
+        print("\n")
+        print (archivo.read())
+        archivo.close()
+        
+        
