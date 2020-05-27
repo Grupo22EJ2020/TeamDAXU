@@ -12,17 +12,17 @@ while True:
 
     if opcionInicial == 1:
         print("\n***** EMPLEADOS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
         opcion1 = int(input("\nElija una opcion: "))
 
     if opcionInicial == 2:
         print("\n***** CURSOS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
         opcion2 = int(input("\nElija una opcion: "))
 
     if opcionInicial == 3:
         print("\n***** TEMAS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
         opcion3 = int(input("\nElija una opcion: "))
 
         if opcion3 == 1:
@@ -41,7 +41,7 @@ while True:
 
     if opcionInicial == 4:
         print("\n***** VIDEOS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
         opcion4 = int(input("\nElija una opcion: "))
 
         if opcion4 == 1:
@@ -64,7 +64,7 @@ while True:
 
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
         opcion5 = int(input("\nElija una opcion: "))
 
         if opcion5 == 1:
@@ -113,7 +113,7 @@ while True:
 
     if opcionInicial == 6:
         print("\n***** VIDEOS ASIGNADOS A UN TEMA *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
         opcion6 = int(input("\nElija una opcion: "))
 
         if opcion6 == 1:
