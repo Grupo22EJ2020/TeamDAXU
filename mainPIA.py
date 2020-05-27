@@ -60,7 +60,10 @@ while True:
             print("\nListo!\n")
             input("\nPresiona enter para continuar...\n") 
 
-
+        if opcion1 == 4:
+            e = empleado(None, None, None)
+            e.consultar()
+            input("\nPresiona enter para continuar...\n")
 
     if opcionInicial == 2:
         print("\n***** CURSOS *****")
