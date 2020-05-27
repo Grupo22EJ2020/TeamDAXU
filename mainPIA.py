@@ -20,8 +20,6 @@ while True:
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion2 = int(input("\nElija una opcion: "))
 
-<<<<<<< HEAD
-=======
         if opcion2 == 1:
             idCurso = int(input("Ingrese el id para guardar el Curso: "))
             descripcion = (input("Ingrese la descripción del Curso: "))
@@ -62,8 +60,7 @@ while True:
             C = curso(None, None, None)
             C.consultar()
             input("\nPresiona enter para continuar...\n")
-    
->>>>>>> 829e2ccc33b7417e76baa82f188f6064f8c82952
+
     if opcionInicial == 3:
         print("\n***** TEMAS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
@@ -120,8 +117,6 @@ while True:
             print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
 
-<<<<<<< HEAD
-=======
         if opcion4 == 2:
             idVideo =  int(input("Ingrese el id del Video: "))
             nombre = (input("Ingrese el nombre del Video: "))
@@ -131,9 +126,8 @@ while True:
             v.borrar()
             print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
->>>>>>> 829e2ccc33b7417e76baa82f188f6064f8c82952
 
-         if opcion4 == 3:
+        if opcion4 == 3:
             v = video(None, None, None)
             v.consultar()
             print("\n**Tome los datos de la informacion de arriba**\n")
