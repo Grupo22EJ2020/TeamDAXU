@@ -27,6 +27,7 @@ while True:
             idEmpleado = int(input("Ingrese el id del Empleado "))
             C = curso(idCurso, descripcion, idEmpleado)
             C.agregar()
+            print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
 
         if opcion2 == 2:
@@ -35,6 +36,7 @@ while True:
             idEmpleado = int(input("ingrese el id del Empleado: "))
             C = curso(idCurso, descripcion, idEmpleado)
             C.borrar()
+            print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
 
         if opcion2 == 3:
@@ -54,6 +56,11 @@ while True:
             C.agregar()
             print("\nListo!\n")
             input("\nPresiona enter para continuar...\n") 
+
+        if opcion2 == 4:
+            C = curso(None, None, None)
+            C.consultar()
+            input("\nPresiona enter para continuar...\n")
     
     if opcionInicial == 3:
         print("\n***** TEMAS *****")
@@ -118,6 +125,11 @@ while True:
             v.agregar()
             print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")   
+
+        if opcion4 == 4:
+            v = video(None, None, None)
+            v.consultar()
+            input("\nPresiona enter para continuar...\n")
 
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
