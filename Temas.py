@@ -33,6 +33,3 @@ def borrar(self):
         if linea != (f"{self.idTema} / {self.nombre} \n"):
             archivo.write(linea)
     archivo.close()
-
-
-

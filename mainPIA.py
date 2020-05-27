@@ -32,7 +32,6 @@ while True:
             t.agregar()
             input("\nPresiona enter para continuar...\n")
 
-
     if opcionInicial == 4:
         print("\n***** VIDEOS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
