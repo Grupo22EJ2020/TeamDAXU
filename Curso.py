@@ -42,4 +42,10 @@ class curso:
              if linea != (f"{self.idCurso} / {self.descripcion} / {self.idEmpleado} \n"):
                 archivo.write(linea)
         archivo.close()
+
+    def consultar(self):
+        archivo=open("./archivos/Curso.txt", 'r')
+        print("\n")
+        print (archivo.read())
+        archivo.close()
    
