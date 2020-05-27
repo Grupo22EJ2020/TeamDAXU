@@ -68,6 +68,7 @@ while True:
             fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
             v = video(idVideo, nombre, url, fechapublicacion)
             v.agregar()
+            print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
 
         if opcion4 == 2:
@@ -77,7 +78,28 @@ while True:
             fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
             v = video(idVideo, nombre, url, fechapublicacion)
             v.borrar()
+            print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
+
+         if opcion4 == 3:
+            v = video(None, None, None)
+            v.consultar()
+            print("\n**Tome los datos de la informacion de arriba**\n")
+            idVideo = int(input("Ingrese el id del Video a modificar: "))
+            nombre = (input("Ingrese el nombre del video a modificar: "))
+            url = (input("Ingrese la url a modificar: "))
+            fechapublicacion = (input("Ingrese la Fecha de Publicacion a modificar: "))
+            v = video(idVideo, nombre, url, fechapublicacion)
+            v.borrar()
+            print("------------------------------")
+            idVideo = int(input("Ingrese el nuevo id del Video: "))
+            nombre = (input("Ingrese el nuevo nombre del Video: "))
+            url = (input("Ingrese la nueva url para guardarla: "))
+            fechapublicacion = (input("Ingrese la nueva Fecha de Publicacion: "))
+            v = video(idVideo, nombre, url, fechapublicacion)
+            v.agregar()
+            print("\nListo!\n")
+            input("\nPresiona enter para continuar...\n")   
 
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
