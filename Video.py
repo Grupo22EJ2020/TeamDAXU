@@ -52,3 +52,13 @@ class video:
                 archivo.write(linea)
         archivo.close()
 
+    def consultar(self):
+        archivo=open("./archivos/video.txt", 'r')
+        print("\n")
+        print (archivo.read())
+        archivo.close()
+
+        
+
+    
+
