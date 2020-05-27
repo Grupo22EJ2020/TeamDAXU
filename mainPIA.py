@@ -37,6 +37,24 @@ while True:
             C.borrar()
             input("\nPresiona enter para continuar...\n")
 
+        if opcion2 == 3:
+            C = curso(None, None, None)
+            C.consultar()
+            print("\n**Tome los datos de la informacion de arriba**\n")
+            idCurso = int(input("Ingrese el id del Curso a modificar: "))
+            descripcion = (input("Ingrese la descripción a modificar: "))
+            idEmpleado = int(input("Ingrese la id del Empleado a modificar: "))
+            C = curso(idCurso, descripcion, idEmpleado)
+            C.borrar()
+            print("------------------------------")
+            idCurso = int(input("Ingrese el nuevo id del Curso: "))
+            descripcion = (input("Ingrese la nueva descripcion del Curso: "))
+            idEmpleado = int(input("Ingrese rl id nuevo del Empleado: "))
+            C = curso(idCurso, descripcion, idEmpleado)
+            C.agregar()
+            print("\nListo!\n")
+            input("\nPresiona enter para continuar...\n") 
+    
     if opcionInicial == 3:
         print("\n***** TEMAS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
