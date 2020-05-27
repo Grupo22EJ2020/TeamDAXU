@@ -5,7 +5,7 @@ class Tema:
 
     @property 
     def idTema(self):
-        return self.idTema
+        return self.__idTema
 
     @idTema.setter
     def idTema(self, valor):
@@ -13,26 +13,23 @@ class Tema:
 
     @property
     def nombre(self):
-        return self.nombre
+        return self.__nombre
 
     @nombre.setter
     def nombre(self, valor):
         self.__nombre = valor
 
-def agregar(self):
-    archivo=open("./archivos/Temas.txt", 'a')
-    archivo.write(f"{self.idTema} / {self.nombre} \n")
-    archivo.close()
+    def agregar(self):
+        archivo=open("./archivos/Temas.txt", 'a')
+        archivo.write(f"{self.idTema} / {self.nombre} \n")
+        archivo.close()
 
-def borrar(self):
-    archivo=open("./archivos/Temas.txt", "r")
-    lineas=archivo.readlines()
-    archivo.close()
-    archivo=open("./archivos/Temas.txt", "w")
-    for linea in lineas:
-        if linea != (f"{self.idTema} / {self.nombre} \n"):
-            archivo.write(linea)
-    archivo.close()
-
-
-
+    def borrar(self):
+        archivo=open("./archivos/Temas.txt", "r")
+        lineas=archivo.readlines()
+        archivo.close()
+        archivo=open("./archivos/Temas.txt", "w")
+        for linea in lineas:
+            if linea != (f"{self.idTema} / {self.nombre} \n"):
+                archivo.write(linea)
+        archivo.close()

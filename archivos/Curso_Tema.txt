@@ -2,4 +2,5 @@ TEMAS ASIGNADOS AL CURSO
 
 idCursoTema / idCurso / idTema
 
-1514 / 15 / 14  
+1012 / 24 / 56  
+1020 / 21 / 31  
