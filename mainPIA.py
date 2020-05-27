@@ -30,6 +30,36 @@ while True:
             print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
 
+        if opcion1 == 2:
+            e = empleado(None, None, None)
+            e.consultar()
+            print("\n**Tome los datos de la informacion de arriba**\n")
+            idempleado = int(input("Ingrese el id del Empleado: "))
+            e = empleados(idempleado, nombre, direccion)
+            e.borrar()
+            print("\nListo!\n")
+            input("\nPresiona enter para continuar...\n")
+
+        if opcion1 == 3:
+            e = empleado(None, None, None)
+            e.consultar()
+            print("\n**Tome los datos de la informacion de arriba**\n")
+            idempleado = int(input("Ingrese el id del Empleado a modificar: "))
+             = curso(idEmpleado, nombre, direccion)
+            e.borrar()
+            print("------------------------------")
+            try:
+                idempleado = int(input("Ingrese el nuevo id del Empleado: "))
+            except:
+                print("**Los id deben ser solo numeros**\n")
+                idEmpleado = int(input("Ingrese el nuevo id del Empleado: "))
+            e = empleado(idEmpleados, nombre, direccion)
+            e.agregar()
+            print("\nListo!\n")
+            input("\nPresiona enter para continuar...\n") 
+
+
+
     if opcionInicial == 2:
         print("\n***** CURSOS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
