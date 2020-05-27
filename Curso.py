@@ -28,6 +28,11 @@ class curso:
     def idEmpleado(self, valor):
         self.__idEmpleado = valor
 
+    def agregar(self):
+        archivo=open("./archivos/Curso.txt", 'a')
+        archivo.write(f"{self.idCurso} / {self.descripcion} / {self.idEmpleado} \n")
+        archivo.close()
+
 
     
 
