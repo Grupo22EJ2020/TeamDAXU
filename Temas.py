@@ -1,4 +1,5 @@
 class Tema:
+    
     def __init__(self,idTema,nombre):
         self.idTema = idTema
         self.nombre = nombre
@@ -39,5 +40,3 @@ class Tema:
         print("\n")
         print (archivo.read())
         archivo.close()
-        
-        

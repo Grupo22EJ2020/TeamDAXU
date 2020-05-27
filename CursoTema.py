@@ -49,5 +49,3 @@ class cursoTema:
         print("\n")
         print(archivo.read())
         archivo.close()
-
-    

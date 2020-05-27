@@ -1,10 +1,11 @@
 class curso:
+    
     def __init__(self, idCurso, descripcion, idEmpleado):
         self.idCurso = idCurso
         self.descripcion = descripcion
         self.idEmpleado = idEmpleado
 
-     @property
+    @property
     def idCurso(self):
         return self.__idCurso
 
@@ -48,4 +49,3 @@ class curso:
         print("\n")
         print (archivo.read())
         archivo.close()
-   

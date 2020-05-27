@@ -1,4 +1,5 @@
 class video:
+
     def __init__(self, idVideo, nombre, url, fechapublicacion):
         self.idVideo = idVideo
         self.nombre = nombre
@@ -57,8 +58,3 @@ class video:
         print("\n")
         print (archivo.read())
         archivo.close()
-
-        
-
-    
-

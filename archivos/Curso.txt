@@ -1,0 +1,3 @@
+CURSOS
+
+idCurso / Descripcion / idEmpleado
