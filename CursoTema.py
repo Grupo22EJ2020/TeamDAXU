@@ -50,5 +50,4 @@ class cursoTema:
         print(archivo.read())
         archivo.close()
 
-    #def verDetalles(self):
-
+    

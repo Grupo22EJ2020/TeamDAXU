@@ -39,7 +39,6 @@ while True:
             t.borrar()
             input("\nPresiona enter para continuar...\n")
 
-
     if opcionInicial == 4:
         print("\n***** VIDEOS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
@@ -53,7 +52,6 @@ while True:
             v = video(idVideo, nombre, url, fechapublicacion)
             v.agregar()
             input("\nPresiona enter para continuar...\n")
-
 
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
@@ -73,8 +71,6 @@ while True:
             ct = cursoTema(None, None, None)
             ct.consultar()
             print("\n**Tome los datos de la informacion de arriba**\n")
-            idCurso = int(input("Ingrese el id del curso: "))
-            idTema = int(input("Ingrese el id del tema: "))
             idCursoTema = int(input("Ingrese idCursoTema: "))
             ct = cursoTema(idCursoTema, idCurso, idTema)
             ct.borrar()
@@ -103,7 +99,7 @@ while True:
             ct = cursoTema(None, None, None)
             ct.consultar()
             input("\nPresiona enter para continuar...\n")
-    
+
     if opcionInicial == 6:
         print("\n***** VIDEOS ASIGNADOS A UN TEMA *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
