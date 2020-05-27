@@ -33,7 +33,13 @@ class curso:
         archivo.write(f"{self.idCurso} / {self.descripcion} / {self.idEmpleado} \n")
         archivo.close()
 
-
-    
-
-    
+    def borrar(self):
+        archivo = open("./archivos/Curso.txt", 'r')
+        lineas = archivo.readlines()
+        archivo.close()
+        archivo = open("./archivos/Curso.txt", 'w')
+        for linea in lineas:
+             if linea != (f"{self.idCurso} / {self.descripcion} / {self.idEmpleado} \n"):
+                archivo.write(linea)
+        archivo.close()
+   

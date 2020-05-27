@@ -2,6 +2,7 @@ from CursoTema import cursoTema
 from Video import video
 from CursoTemaVideo import cursotemavideo
 from Temas import Tema
+from Curso import curso
 
 while True:
 
@@ -19,6 +20,22 @@ while True:
         print("\n***** CURSOS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion2 = int(input("\nElija una opcion: "))
+
+        if opcion2 == 1:
+            idCurso = int(input("Ingrese el id para guardar el Curso: "))
+            descripcion = (input("Ingrese la descripción del Curso: "))
+            idEmpleado = int(input("Ingrese el id del Empleado "))
+            C = curso(idCurso, descripcion, idEmpleado)
+            C.agregar()
+            input("\nPresiona enter para continuar...\n")
+
+        if opcion2 == 2:
+            idCurso = int(input("Ingrese el id del Curso: "))
+            descripcion = (input("Ingrese la descripcion del Curso: "))
+            idEmpleado = int(input("ingrese el id del Empleado: "))
+            C = curso(idCurso, descripcion, idEmpleado)
+            C.borrar()
+            input("\nPresiona enter para continuar...\n")
 
     if opcionInicial == 3:
         print("\n***** TEMAS *****")
