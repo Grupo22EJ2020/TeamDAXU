@@ -1,6 +1,3 @@
 TEMAS
 
-id del tema / Nombre del tema
-
-18 / Programacion 
-20 / Ingles 
+idTema / Nombre
