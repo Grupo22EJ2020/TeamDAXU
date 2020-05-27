@@ -2,7 +2,6 @@ from CursoTema import cursoTema
 from Video import video
 from CursoTemaVideo import cursotemavideo
 from Temas import Tema
-from Curso import curso
 
 while True:
 
@@ -13,33 +12,17 @@ while True:
 
     if opcionInicial == 1:
         print("\n***** EMPLEADOS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion1 = int(input("\nElija una opcion: "))
 
     if opcionInicial == 2:
         print("\n***** CURSOS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion2 = int(input("\nElija una opcion: "))
-
-        if opcion2 == 1:
-            idCurso = int(input("Ingrese el id para guardar el Curso: "))
-            descripcion = (input("Ingrese la descripción del Curso: "))
-            idEmpleado = int(input("Ingrese el id del Empleado "))
-            C = curso(idCurso, descripcion, idEmpleado)
-            C.agregar()
-            input("\nPresiona enter para continuar...\n")
-
-        if opcion2 == 2:
-            idCurso = int(input("Ingrese el id del Curso: "))
-            descripcion = (input("Ingrese la descripcion del Curso: "))
-            idEmpleado = int(input("ingrese el id del Empleado: "))
-            C = curso(idCurso, descripcion, idEmpleado)
-            C.borrar()
-            input("\nPresiona enter para continuar...\n")
 
     if opcionInicial == 3:
         print("\n***** TEMAS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion3 = int(input("\nElija una opcion: "))
 
         if opcion3 == 1:
@@ -56,13 +39,35 @@ while True:
             t.borrar()
             input("\nPresiona enter para continuar...\n")
 
+        if opcion3 == 3:
+            t = Tema(None, None)
+            t.consultar()
+            print("\n**Tome los datos de la informacion de arriba**\n")
+            idTema = int(input("Ingrese el id del tema que desea modificar: "))
+            nombre = int(input("Ingrese el nombre del tema que desea modificar: "))
+            t = Tema(idTema, nombre)
+            t.borrar()
+            print("--------------------------------------")
+            idTema = int(input("Ingrese el nuevo id del tema: "))
+            nombre = int(input("Ingrese el nuevo nombre del tema: "))
+            t = Tema(idTema, nombre)
+            t.agregar()
+            print("\nListo!\n")
+            input("\nPresiona enter para continuar...\n")
+
+        if opcion3 == 4:
+            t = Tema (None, None)
+            t.consultar()
+            input("\nPresiona enter para continuar...\n")
+            
+
     if opcionInicial == 4:
         print("\n***** VIDEOS *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion4 = int(input("\nElija una opcion: "))
 
         if opcion4 == 1:
-            idVideo = int(input("Ingrese el id para guardar el Video: "))
+            idVideo = int(input("Ingresa el id para guardar el Video: "))
             nombre = (input("Ingrese el nombre del Video: "))
             url = (input("Ingrese el url del Video: "))
             fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
@@ -70,18 +75,10 @@ while True:
             v.agregar()
             input("\nPresiona enter para continuar...\n")
 
-        if opcion4 == 2:
-            idVideo =  int(input("Ingrese el id del Video: "))
-            nombre = (input("Ingrese el nombre del Video: "))
-            url = (input("Ingrese el url del Video: "))
-            fechapublicacion = (input("Ingrese la Fecha de Publicación del Video: "))
-            v = video(idVideo, nombre, url, fechapublicacion)
-            v.borrar()
-            input("\nPresiona enter para continuar...\n")
 
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion5 = int(input("\nElija una opcion: "))
 
         if opcion5 == 1:
@@ -97,9 +94,9 @@ while True:
             ct = cursoTema(None, None, None)
             ct.consultar()
             print("\n**Tome los datos de la informacion de arriba**\n")
+            idCurso = int(input("Ingrese el id del curso: "))
+            idTema = int(input("Ingrese el id del tema: "))
             idCursoTema = int(input("Ingrese idCursoTema: "))
-            idCurso = int(input("Ingrese idCurso: "))
-            idTema = int(input("Ingrese idTema: "))
             ct = cursoTema(idCursoTema, idCurso, idTema)
             ct.borrar()
             print("\nListo!\n")
@@ -127,10 +124,10 @@ while True:
             ct = cursoTema(None, None, None)
             ct.consultar()
             input("\nPresiona enter para continuar...\n")
-
+    
     if opcionInicial == 6:
         print("\n***** VIDEOS ASIGNADOS A UN TEMA *****")
-        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n")
+        print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
         opcion6 = int(input("\nElija una opcion: "))
 
         if opcion6 == 1:
