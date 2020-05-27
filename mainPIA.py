@@ -3,7 +3,7 @@ from Video import video
 from CursoTemaVideo import cursotemavideo
 from Temas import Tema
 from Curso import curso
-from Empleados import Empleado
+from Empleados import empleado
 
 while True:
 
@@ -35,7 +35,9 @@ while True:
             e.consultar()
             print("\n**Tome los datos de la informacion de arriba**\n")
             idempleado = int(input("Ingrese el id del Empleado: "))
-            e = empleados(idempleado, nombre, direccion)
+            nombre = input("Ingrese el nombre del Empleado: ")
+            direccion = input("Ingrese la direccion del Empleado: ")
+            e = empleado(idempleado, nombre, direccion)
             e.borrar()
             print("\nListo!\n")
             input("\nPresiona enter para continuar...\n")
@@ -45,16 +47,18 @@ while True:
             e.consultar()
             print("\n**Tome los datos de la informacion de arriba**\n")
             idempleado = int(input("Ingrese el id del Empleado a modificar: "))
+            nombre = input("Ingrese el nombre del Empleado a modificar: ")
+            direccion = input("Ingrese la direccion del Empleado a modificar: ")
             e = empleado(idempleado, nombre, direccion)
             e.borrar()
             print("------------------------------")
             try:
                 idempleado = int(input("Ingrese el nuevo id del Empleado: "))
-                nombre = int(input("Ingrese nuevo Nombre"))
-                direccion = int(input("ingrese nueva direccion"))
             except:
                 print("**Los id deben ser solo numeros**\n")
                 idEmpleado = int(input("Ingrese el nuevo id del Empleado: "))
+            nombre = input("Ingrese el nuevo nombre del Empleado: ")
+            direccion = input("Ingrese la nueva direccion del Empleado: ")
             e = empleado(idempleado, nombre, direccion)
             e.agregar()
             print("\nListo!\n")
