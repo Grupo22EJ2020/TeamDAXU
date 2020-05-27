@@ -32,6 +32,14 @@ while True:
             t.agregar()
             input("\nPresiona enter para continuar...\n")
 
+        if opcion3 == 2:
+            idTema = int(input("Ingrese el id del tema: "))
+            nombre = int(input("Ingrese el nombre del tema: "))
+            t = Tema(idTema, nombre)
+            t.borrar()
+            input("\nPresiona enter para continuar...\n")
+
+
     if opcionInicial == 4:
         print("\n***** VIDEOS *****")
         print("1.- Agregar\n2.- Borrar\n3.- Modificar\n4.- Consultar todo\n5.- Ver detalles")
@@ -45,6 +53,7 @@ while True:
             v = video(idVideo, nombre, url, fechapublicacion)
             v.agregar()
             input("\nPresiona enter para continuar...\n")
+
 
     if opcionInicial == 5:
         print("\n***** TEMAS ASIGNADOS AL CURSO *****")
